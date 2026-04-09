@@ -117,5 +117,9 @@ public class PurchaseService {
         }
 
         return savedReceipt;
+
+    }
+    public List<PurchaseReceipt> getReceiptsByPerson(String personName) {
+        return purchaseReceiptRepository.findByPersonName(personName);
     }
 }
